@@ -5,7 +5,7 @@ import cors from "cors";
 import http from "http";                // 👈 Thêm
 import { Server } from "socket.io";     // 👈 Thêm
 
-import productRoutes from "./src/routes/product.js"; 
+import productRoutes from "./src/routes/Product.js"; 
 import userRoutes from "./src/routes/user.js";       
 import categoriesRoutes from "./src/routes/categories.js";
 import cartRoutes from "./src/routes/cartRoutes.js";
