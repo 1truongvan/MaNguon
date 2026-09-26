@@ -1,16 +1,23 @@
 import express from "express";
-import { addToCart,
+
+import {
+  addToCart,
   getCart,
   updateCartItem,
-  removeCartItem } from "../controller/CartController.js";
-import { verifyToken,isAdmin } from "../middlewares/auth.js";
+  removeCartItem,
+  clearCart
+} from "../controller/CartController.js";
+
+import { verifyToken, isAdmin } from "../middlewares/auth.js";
 
 const router = express.Router();
 
 // Thêm sản phẩm
 router.post("/add", verifyToken, addToCart);
+
 // Lấy giỏ hàng
 router.get("/", verifyToken, getCart);
+
 // Cập nhật số lượng
 router.put("/:id", verifyToken, updateCartItem);
 
