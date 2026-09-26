@@ -1,0 +1,31 @@
+# Backend
+.env
+.env.local
+.env.*.local
+node_modules/
+dist/
+backend/.env
+*.env
+
+
+# Frontend  
+.env
+.env.local
+node_modules/
+dist/
+
+# General
+venv/
+__pycache__/
+*.log
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# .gitignore
+venv/
+backend/node_modules/
+frontend/node_modules/

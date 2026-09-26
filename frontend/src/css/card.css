@@ -1,0 +1,9 @@
+/* Trong file CSS của bạn */
+.product-link {
+    text-decoration: none !important; /* Loại bỏ gạch chân */
+    color: inherit; /* Giữ màu chữ mặc định của ProductCard */
+}
+
+.product-link:hover {
+    text-decoration: none;
+}

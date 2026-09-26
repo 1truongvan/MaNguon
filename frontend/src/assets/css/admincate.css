@@ -1,0 +1,131 @@
+/* ===============================
+   BẢNG DANH MỤC
+================================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background: #f7f7f7;
+  font-weight: 600;
+}
+
+tr:hover {
+  background: #fafafa;
+}
+
+/* ===============================
+   INPUT + TEXTAREA
+================================= */
+
+.input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  transition: 0.2s;
+  font-size: 15px;
+}
+
+.input:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 4px rgba(59, 130, 246, 0.3);
+}
+
+textarea.input {
+  resize: vertical;
+}
+
+/* ===============================
+   BUTTONS
+================================= */
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Nút thêm */
+button.add-btn {
+  background: #22c55e;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Nút sửa */
+button.edit-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+/* ===============================
+   MODAL
+================================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-box {
+  width: 450px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button.cancel-btn {
+  background: #e5e7eb;
+}
+
+button.save-btn {
+  background: #3b82f6;
+  color: white;
+}

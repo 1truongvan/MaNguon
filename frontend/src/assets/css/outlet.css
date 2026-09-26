@@ -1,0 +1,249 @@
+.outlet-page {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+/* Hero Section */
+.outlet-hero {
+  background: linear-gradient(135deg, rgba(26, 15, 74, 0.95) 0%, rgba(26, 15, 74, 0.85) 100%);
+  color: white;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.outlet-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.outlet-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.outlet-hero h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.6s ease-out;
+  color: #fff;
+  font-weight: 700;
+}
+
+.outlet-hero p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 18px;
+}
+
+/* Products Section */
+.outlet-product-col {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.outlet-product-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.outlet-product-card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+}
+
+.product-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  aspect-ratio: 3/4;
+}
+
+.outlet-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.outlet-product-card:hover .outlet-product-image {
+  transform: scale(1.05);
+}
+
+.discount-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #ff4757 0%, #ee5a52 100%);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(255, 71, 87, 0.4);
+  z-index: 2;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+  min-height: 40px;
+}
+
+.price-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.original-price {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+.discount-price {
+  color: #ff4757;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.outlet-add-btn {
+  background-color: #1A0F4A;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.outlet-add-btn:hover {
+  background-color: #2d1f6b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 15, 74, 0.3);
+  color: #fff;
+}
+
+/* Breadcrumb */
+.outlet-page .breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.outlet-page .breadcrumb-item a {
+  color: #666;
+  text-decoration: none;
+}
+
+.outlet-page .breadcrumb-item a:hover {
+  color: #1A0F4A;
+}
+
+.outlet-page .breadcrumb-item.active {
+  color: #333;
+}
+
+/* Info Section */
+.outlet-info-section {
+  border-top: 1px solid #e9ecef;
+  background-color: #f8f9fa;
+}
+
+.outlet-info-section h5 {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1A0F4A;
+}
+
+.outlet-info-section p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Pagination */
+.pagination-wrapper {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.pagination {
+  gap: 5px;
+}
+
+.page-link {
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 8px 12px;
+  min-width: 40px;
+  text-align: center;
+  background: none;
+  cursor: pointer;
+}
+
+.page-link:hover {
+  background-color: #f5f5f5;
+  border-color: #1A0F4A;
+  color: #1A0F4A;
+}
+
+.page-item.active .page-link {
+  background-color: #1A0F4A;
+  border-color: #1A0F4A;
+  color: #fff;
+}
+
+.page-item.disabled .page-link {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .outlet-hero h1 {
+    font-size: 32px;
+  }
+
+  .outlet-hero p {
+    font-size: 16px;
+  }
+
+  .discount-badge {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
