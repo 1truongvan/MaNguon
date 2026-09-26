@@ -1,30 +1,18 @@
-## ===== Stage 1: Build =====
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM node:20-alpine
 
-WORKDIR /src
+WORKDIR /app
 
-# Copy file project và restore package
-COPY *.csproj ./
-RUN dotnet restore
+# Copy package.json trước để cài dependency
+COPY package*.json ./
+
+RUN npm install
 
 # Copy toàn bộ source code
 COPY . .
 
-# Publish project ở chế độ Release
-RUN dotnet publish -c Release -o /app/publish
+# Port backend (đổi nếu project dùng port khác)
+EXPOSE 5000
 
-## ===== Stage 2: Run =====
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+ENV NODE_ENV=production
 
-WORKDIR /app
-
-# Copy file đã publish
-COPY --from=build /app/publish .
-
-# Render sẽ chạy cổng 8080
-ENV ASPNETCORE_URLS=http://+:8080
-
-EXPOSE 8080
-
-# Thay EWarrantySystem.dll bằng tên DLL của project nếu khác
-ENTRYPOINT ["dotnet", "EWarrantySystem.dll"]
+CMD ["npm", "start"]
