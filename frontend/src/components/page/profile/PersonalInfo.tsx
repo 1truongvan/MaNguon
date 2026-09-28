@@ -43,7 +43,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ user, onUpdate }) => {
     try {
       const token = tokenManager.getAccessToken();
       const res = await axios.put(
-        `https://manguon-2.onrender.com/api/users/${user._id}`,
+        `https://manguon-4d.onrender.com/api/users/${user._id}`,
         formData,
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -268,7 +268,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
 
       const response =
         await axios.put(
-          `https://manguon-2.onrender.com/api/products/${product._id}`,
+          `https://manguon-4d.onrender.com/api/products/${product._id}`,
           {
             is_new: isNew,
           },
@@ -455,7 +455,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
 
     const response =
       await axios.post(
-        'https://manguon-2.onrender.com/api/products/upload',
+        'https://manguon-4d.onrender.com/api/products/upload',
         uploadData,
         {
           headers: {
@@ -624,7 +624,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
       if (product) {
 
         await axios.put(
-          `https://manguon-2.onrender.com/api/products/${product._id}`,
+          `https://manguon-4d.onrender.com/api/products/${product._id}`,
           submitData,
           {
             headers,
@@ -640,7 +640,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
       else {
 
         await axios.post(
-          'https://manguon-2.onrender.com/api/products',
+          'https://manguon-4d.onrender.com/api/products',
           submitData,
           {
             headers,

@@ -31,7 +31,7 @@ const NewProducts: React.FC = () => {
       try {
         setLoading(true);
         // Chỉ lấy sản phẩm có is_new === true
-        const response = await axios.get('https://manguon-2.onrender.com/api/products/?is_new=true');
+        const response = await axios.get('https://manguon-4d.onrender.com/api/products/?is_new=true');
         const allProducts = response.data;
         
         // Lọc lại để đảm bảo chỉ có sản phẩm is_new === true (nếu có lỗi từ backend)

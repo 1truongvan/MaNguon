@@ -31,7 +31,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({ user, onUpdate }) => {
     try {
       const token = tokenManager.getAccessToken();
       await axios.put(
-        `https://manguon-2.onrender.com/api/users/${user._id}`,
+        `https://manguon-4d.onrender.com/api/users/${user._id}`,
         formData,
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -31,7 +31,7 @@ const OutletPage: React.FC = () => {
       try {
         setLoading(true);
         // Lấy tất cả sản phẩm
-        const response = await axios.get('https://manguon-2.onrender.com/api/products/');
+        const response = await axios.get('https://manguon-4d.onrender.com/api/products/');
         const allProducts = response.data;
         
         // Lọc chỉ lấy sản phẩm có discount > 0

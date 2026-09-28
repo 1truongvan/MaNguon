@@ -29,7 +29,7 @@ const NewArri: React.FC = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const res = await fetch(`https://manguon-2.onrender.com/api/products?category_id=${AO_THUN_ID}`);
+                const res = await fetch(`https://manguon-4d.onrender.com/api/products?category_id=${AO_THUN_ID}`);
                 const data = await res.json();
 
                 if (Array.isArray(data)) {

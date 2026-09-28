@@ -90,7 +90,7 @@ const Checkout: React.FC = () => {
 
     const token = localStorage.getItem("accessToken");
     axios
-      .get("https://manguon-2.onrender.com/api/cart/", {
+      .get("https://manguon-4d.onrender.com/api/cart/", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -162,7 +162,7 @@ const handlePayment = async () => {
 
   // 🔥 1. TẠO ORDER TRƯỚC
   const orderRes = await axios.post(
-    "https://manguon-2.onrender.com/api/order/",
+    "https://manguon-4d.onrender.com/api/order/",
     {
       customer_name: customerName,
       customer_phone: customerPhone,
@@ -189,7 +189,7 @@ const handlePayment = async () => {
 
   if (payment === "VNPAY") {
     const res = await axios.post(
-      "https://manguon-2.onrender.com/api/payments/vnpay/create",
+      "https://manguon-4d.onrender.com/api/payments/vnpay/create",
       {
         amount: subtotal,
         paymentCode: "VNPAY",
@@ -204,7 +204,7 @@ const handlePayment = async () => {
 
   if (payment === "MOMO") {
     const res = await axios.post(
-      "https://manguon-2.onrender.com/api/payments/momo",
+      "https://manguon-4d.onrender.com/api/payments/momo",
       {
         amount: subtotal,
         paymentCode: "MOMO",
@@ -223,7 +223,7 @@ const handlePayment = async () => {
 
   alert("Đặt hàng thành công!");
   if (!buyNowItem) {
-    await axios.delete("https://manguon-2.onrender.com/api/cart/clear/all", {
+    await axios.delete("https://manguon-4d.onrender.com/api/cart/clear/all", {
       headers: { Authorization: `Bearer ${token}` },
     });
   }

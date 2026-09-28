@@ -31,7 +31,7 @@ const AdminDatabase: React.FC = () => {
   const [error, setError] = useState<string>('');
   const [refreshing, setRefreshing] = useState(false);
 
-  const API_URL = 'https://manguon-2.onrender.com/api/admin';
+  const API_URL = 'https://manguon-4d.onrender.com/api/admin';
 
   const getAuthHeaders = () => {
     const token = localStorage.getItem('accessToken');

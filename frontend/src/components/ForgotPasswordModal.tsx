@@ -96,7 +96,7 @@ const ForgotPasswordModal: React.FC<ForgotPasswordModalProps> = ({
     try {
       console.log("📧 Gửi forgot password request với email:", email);
 
-      const res = await axios.post("https://manguon-2.onrender.com/api/users/forgot-password", {
+      const res = await axios.post("https://manguon-4d.onrender.com/api/users/forgot-password", {
         email: email.trim(),
       });
 
@@ -156,7 +156,7 @@ const ForgotPasswordModal: React.FC<ForgotPasswordModalProps> = ({
     try {
       console.log("🔄 Gửi reset password request");
 
-      const res = await axios.post("https://manguon-2.onrender.com/api/users/reset-password", {
+      const res = await axios.post("https://manguon-4d.onrender.com/api/users/reset-password", {
         token: resetToken,
         password,
         confirmPassword,

@@ -29,7 +29,7 @@ const AccountSettings: React.FC<AccountSettingsProps> = ({ user, onUpdate }) => 
       setError("");
       setSuccess("");
       await axios.put(
-        `https://manguon-2.onrender.com/api/users/${user._id}`,
+        `https://manguon-4d.onrender.com/api/users/${user._id}`,
         {
           language: lang,
           privacySettings: privacy,
@@ -49,7 +49,7 @@ const AccountSettings: React.FC<AccountSettingsProps> = ({ user, onUpdate }) => 
       setError("");
       setSuccess("");
       await axios.post(
-        "https://manguon-2.onrender.com/api/users/me/change-password",
+        "https://manguon-4d.onrender.com/api/users/me/change-password",
         passwordForm,
         { headers: { Authorization: `Bearer ${token}` } }
       );

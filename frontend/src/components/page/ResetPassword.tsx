@@ -72,7 +72,7 @@ const ResetPasswordPage: React.FC = () => {
     try {
       console.log("🔄 Gửi reset password request");
 
-      const res = await axios.post("https://manguon-2.onrender.com/api/users/reset-password", {
+      const res = await axios.post("https://manguon-4d.onrender.com/api/users/reset-password", {
         token,
         password,
         confirmPassword,

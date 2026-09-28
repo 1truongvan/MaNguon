@@ -46,7 +46,7 @@ const PaymentMethods: React.FC<PaymentMethodsProps> = ({ user, onUpdate }) => {
     if (!window.confirm("Bạn có chắc muốn xóa phương thức thanh toán này?")) return;
     try {
       const token = tokenManager.getAccessToken();
-      await axios.delete(`https://manguon-2.onrender.com/api/users/me/payment-methods/${methodId}`, {
+      await axios.delete(`https://manguon-4d.onrender.com/api/users/me/payment-methods/${methodId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setSuccess("Xóa phương thức thanh toán thành công!");
@@ -63,7 +63,7 @@ const PaymentMethods: React.FC<PaymentMethodsProps> = ({ user, onUpdate }) => {
 
     try {
       const token = tokenManager.getAccessToken();
-      await axios.post("https://manguon-2.onrender.com/api/users/me/payment-methods", formData, {
+      await axios.post("https://manguon-4d.onrender.com/api/users/me/payment-methods", formData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setSuccess("Thêm phương thức thanh toán thành công!");

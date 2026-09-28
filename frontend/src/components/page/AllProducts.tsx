@@ -32,7 +32,7 @@ const AllProducts: React.FC = () => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        let url = 'https://manguon-2.onrender.com/api/products/';
+        let url = 'https://manguon-4d.onrender.com/api/products/';
         
         // If a specific category is selected, filter by it
         if (selectedCategory !== 'all') {

@@ -69,7 +69,7 @@ const Cart: React.FC = () => {
         const token = localStorage.getItem("accessToken");
         if (!token) return;
 
-        const res = await axios.get("https://manguon-2.onrender.com/api/cart", {
+        const res = await axios.get("https://manguon-4d.onrender.com/api/cart", {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -112,7 +112,7 @@ const removeItem = async (id: string) => {
     }
 
     // GỌI API XOÁ
-    await axios.delete(`https://manguon-2.onrender.com/api/cart/${id}`, {
+    await axios.delete(`https://manguon-4d.onrender.com/api/cart/${id}`, {
       headers: { Authorization: `Bearer ${token}` }
     });
 

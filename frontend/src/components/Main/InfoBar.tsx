@@ -18,7 +18,7 @@ function InfoBar() {
   useEffect(() => {
     const fetchCoupons = async () => {
       try {
-        const res = await axios.get('https://manguon-2.onrender.com/api/coupons');
+        const res = await axios.get('https://manguon-4d.onrender.com/api/coupons');
         if (res.data && Array.isArray(res.data)) {
           setVouchers(res.data);
         } else if (res.data.data && Array.isArray(res.data.data)) {
