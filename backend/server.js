@@ -21,17 +21,37 @@ dotenv.config();
 
 const app = express();
 const server = http.createServer(app);   // 👈 Dùng http.createServer
-const io = new Server(server, {          // 👈 Tạo Socket server
+// const io = new Server(server, {          // 👈 Tạo Socket server
+  // cors: {
+    // origin: ["http://localhost:5173", "http://localhost:5174", "http://localhost:3000"],
+    // credentials: true,
+  // },
+// });
+// 
+
+const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173", "http://localhost:5174", "http://localhost:3000"],
+    origin: allowedOrigins,
     credentials: true,
   },
 });
 
 const PORT = process.env.PORT || 5000;
 
+// app.use(cors({
+  // origin: ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000'],
+  // credentials: true
+// }));
+// 
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "https://manguon-2.onrender.com"
+];
+
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000'],
+  origin: allowedOrigins,
   credentials: true
 }));
 
