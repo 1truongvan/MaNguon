@@ -84,7 +84,7 @@ const handleGoogleResponse = useCallback(
   async (response: { credential: string }) => {
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/auth/social/google/callback",
+        "https://manguon-2.onrender.com/api/auth/social/google/callback",
         { credential: response.credential }
       );
 
@@ -108,7 +108,7 @@ const handleGoogleResponse = useCallback(
     async (userInfo: FacebookUserInfo) => {
       try {
         const res = await axios.post(
-          "http://localhost:3000/api/auth/social/facebook/callback",
+          "https://manguon-2.onrender.com/api/auth/social/facebook/callback",
           {
             id: userInfo.id,
             email: userInfo.email,
@@ -206,7 +206,7 @@ const handleGoogleResponse = useCallback(
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3000/api/users/login", {
+      const res = await axios.post("https://manguon-2.onrender.com/api/users/login", {
         email: emailOrPhone,
         password: password,
       });
@@ -232,7 +232,7 @@ const handleGoogleResponse = useCallback(
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3000/api/users/register", {
+      const res = await axios.post("https://manguon-2.onrender.com/api/users/register", {
         name,
         phone,
         email,

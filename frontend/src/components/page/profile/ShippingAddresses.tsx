@@ -73,14 +73,14 @@ const ShippingAddresses: React.FC<ShippingAddressesProps> = ({ user, onUpdate })
 
       if (editingAddress) {
         await axios.put(
-          `http://localhost:3000/api/users/me/shipping-addresses/${editingAddress._id}`,
+          `https://manguon-2.onrender.com/api/users/me/shipping-addresses/${editingAddress._id}`,
           formData,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setSuccess("Cập nhật địa chỉ thành công!");
       } else {
         await axios.post(
-          "http://localhost:3000/api/users/me/shipping-addresses",
+          "https://manguon-2.onrender.com/api/users/me/shipping-addresses",
           formData,
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -99,7 +99,7 @@ const ShippingAddresses: React.FC<ShippingAddressesProps> = ({ user, onUpdate })
 
     try {
       const token = tokenManager.getAccessToken();
-      await axios.delete(`http://localhost:3000/api/users/me/shipping-addresses/${addressId}`, {
+      await axios.delete(`https://manguon-2.onrender.com/api/users/me/shipping-addresses/${addressId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setSuccess("Xóa địa chỉ thành công!");

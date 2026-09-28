@@ -36,8 +36,8 @@ const AdminProducts: React.FC = () => {
 
   const [itemsPerPage, setItemsPerPage] = useState(10);
 
-  const API_URL = 'http://localhost:3000/api/products';
-  const CATEGORIES_URL = 'http://localhost:3000/api/categories';
+  const API_URL = 'https://manguon-2.onrender.com/api/products';
+  const CATEGORIES_URL = 'https://manguon-2.onrender.com/api/categories';
 
   // =========================
   // AUTH

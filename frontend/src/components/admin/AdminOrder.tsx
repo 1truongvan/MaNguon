@@ -19,7 +19,7 @@ const AdminOrder: React.FC = () => {
 
   const token = localStorage.getItem("accessToken");
   
-  const API_BASE_URL = 'http://localhost:3000/api/Order';
+  const API_BASE_URL = 'https://manguon-2.onrender.com/api/Order';
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {

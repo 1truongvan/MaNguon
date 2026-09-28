@@ -43,7 +43,7 @@ const ProductDetail: React.FC = () => {
 
   try {
     const res = await axios.post(
-      "http://localhost:3000/api/cart/add",
+      "https://manguon-2.onrender.com/api/cart/add",
       {
         product_id: productData._id,
         quantity,
@@ -82,7 +82,7 @@ const ProductDetail: React.FC = () => {
 
   const fetchProduct = async () => {
     try {
-      const res = await fetch(`http://localhost:3000/api/products/${id}`);
+      const res = await fetch(`https://manguon-2.onrender.com/api/products/${id}`);
       const data = await res.json();
 
       const formattedData: Product = {
@@ -145,7 +145,7 @@ const handleBuyNow = () => {
   // -------------------------
   const fetchRelated = async (categoryId: string) => {
     try {
-      const res = await fetch(`http://localhost:3000/api/products?category_id=${categoryId}`);
+      const res = await fetch(`https://manguon-2.onrender.com/api/products?category_id=${categoryId}`);
       const data = await res.json();
 
       if (Array.isArray(data)) {

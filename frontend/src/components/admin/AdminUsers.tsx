@@ -30,7 +30,7 @@ const AdminUsers: React.FC = () => {
   const [filterRole, setFilterRole] = useState<string>('all');
   const [itemsPerPage, setItemsPerPage] = useState(10);
 
-  const API_URL = 'http://localhost:3000/api/users';
+  const API_URL = 'https://manguon-2.onrender.com/api/users';
 
   // Get auth token
   const getAuthHeaders = () => {

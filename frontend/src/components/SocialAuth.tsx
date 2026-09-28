@@ -60,7 +60,7 @@ const SocialAuthComponent: React.FC = () => {
         };
 
         const res = await axios.post(
-          "http://localhost:3000/api/auth/social/google/callback",
+          "https://manguon-2.onrender.com/api/auth/social/google/callback",
           {
             id: decoded.sub,
             email: decoded.email,
@@ -133,7 +133,7 @@ const SocialAuthComponent: React.FC = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/auth/social/facebook/callback",
+        "https://manguon-2.onrender.com/api/auth/social/facebook/callback",
         {
           id: userInfo.id,
           email: userInfo.email,

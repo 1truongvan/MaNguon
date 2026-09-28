@@ -27,7 +27,7 @@ const getImage = (url: string | undefined | null) => {
 
   // CASE 2: Ảnh backend /uploads
   if (url.includes("uploads")) {
-    return "http://localhost:3000/" + url.replace(/\\/g, "/").replace("public/", "");
+    return "https://manguon-2.onrender.com/" + url.replace(/\\/g, "/").replace("public/", "");
   }
 
   // CASE 3: Ảnh FE /src/assets
@@ -69,7 +69,7 @@ const Cart: React.FC = () => {
         const token = localStorage.getItem("accessToken");
         if (!token) return;
 
-        const res = await axios.get("http://localhost:3000/api/cart", {
+        const res = await axios.get("https://manguon-2.onrender.com/api/cart", {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -112,7 +112,7 @@ const removeItem = async (id: string) => {
     }
 
     // GỌI API XOÁ
-    await axios.delete(`http://localhost:3000/api/cart/${id}`, {
+    await axios.delete(`https://manguon-2.onrender.com/api/cart/${id}`, {
       headers: { Authorization: `Bearer ${token}` }
     });
 

@@ -17,7 +17,7 @@ interface Category {
 const token = localStorage.getItem("accessToken");
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:3000/api",
+  baseURL: "https://manguon-2.onrender.com/api",
   headers: token ? { Authorization: `Bearer ${token}` } : {},
   withCredentials: true,
 });

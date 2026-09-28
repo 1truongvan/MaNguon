@@ -33,7 +33,7 @@ const MenPants: React.FC = () => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        let url = 'http://localhost:3000/api/products/';
+        let url = 'https://manguon-2.onrender.com/api/products/';
         
         // If a specific category is selected, filter by it
         if (selectedCategory !== 'all') {
@@ -96,7 +96,7 @@ const MenPants: React.FC = () => {
   const getImageUrl = (img: string | undefined) => {
     if (!img) return '/no-image.png';
     if (img.startsWith('http')) return img;
-    return `http://localhost:3000/${img}`;
+    return `https://manguon-2.onrender.com/${img}`;
   };
 
   const formatPrice = (price: number, discount?: number) => {

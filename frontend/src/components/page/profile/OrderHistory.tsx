@@ -41,7 +41,7 @@ const OrderHistory: React.FC = () => {
       try {
         const token = tokenManager.getAccessToken();
         if (!token) return;
-        const res = await axios.get("http://localhost:3000/api/orders", {
+        const res = await axios.get("https://manguon-2.onrender.com/api/orders", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setOrders(res.data || []);

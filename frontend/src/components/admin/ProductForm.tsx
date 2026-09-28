@@ -268,7 +268,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
 
       const response =
         await axios.put(
-          `http://localhost:3000/api/products/${product._id}`,
+          `https://manguon-2.onrender.com/api/products/${product._id}`,
           {
             is_new: isNew,
           },
@@ -455,7 +455,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
 
     const response =
       await axios.post(
-        'http://localhost:3000/api/products/upload',
+        'https://manguon-2.onrender.com/api/products/upload',
         uploadData,
         {
           headers: {
@@ -485,7 +485,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
           return img;
         }
 
-        return `http://localhost:3000${img}`;
+        return `https://manguon-2.onrender.com${img}`;
       }
     );
   };
@@ -624,7 +624,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
       if (product) {
 
         await axios.put(
-          `http://localhost:3000/api/products/${product._id}`,
+          `https://manguon-2.onrender.com/api/products/${product._id}`,
           submitData,
           {
             headers,
@@ -640,7 +640,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
       else {
 
         await axios.post(
-          'http://localhost:3000/api/products',
+          'https://manguon-2.onrender.com/api/products',
           submitData,
           {
             headers,

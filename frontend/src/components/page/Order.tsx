@@ -50,8 +50,8 @@ const Order: React.FC = () => {
         // Gọi API Backend (Sửa lại port nếu backend của bạn khác 3000)
         // Nếu có ID trên URL thì gọi API chi tiết, nếu không thì gọi lấy danh sách mẫu
         const url = id 
-            ? `http://localhost:3000/api/Order/${id}`
-            : `http://localhost:3000/api/Order/`;
+            ? `https://manguon-2.onrender.com/api/Order/${id}`
+            : `https://manguon-2.onrender.com/api/Order/`;
 
         const response = await fetch(url);
         
