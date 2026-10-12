@@ -9,6 +9,7 @@ interface ProductCardProps {
   created_at?: string;
 }
 import "../css/card.css"
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function ProductCard({ tag, imageUrl, title, price, is_new, updated_at, created_at }: ProductCardProps) {
   // Chỉ hiển thị tag "HÀNG MỚI" nếu is_new = true (không dùng tag hardcode)
   const showNewTag = is_new === true;
